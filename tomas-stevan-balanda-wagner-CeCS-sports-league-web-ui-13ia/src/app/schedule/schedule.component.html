@@ -1,0 +1,38 @@
+<h1>League Schedule</h1>
+<table>
+    <tr>
+        <th class="right pad-r not-500">Date/Time</th>
+        <th [colSpan]="2" class="left not-750">Stadium</th>
+        <th class="right">Home Team</th>
+        <th></th>
+        <th class="left">Away Team</th>
+    </tr>
+    <tr *ngFor="let match of leagueService.getMatches()">
+        <td class="right pad-r not-500">
+            <p>{{match.matchDate| date:"d.M.yyyy" }}</p>
+            <p>{{match.matchDate| date:"hh:mm" }}</p>
+        </td>
+        <td [colSpan]="2" class="not-750">{{match.stadium}}</td>
+        <td class="right">
+            <div class="country">
+                <p><b>{{match.homeTeam}}</b></p>
+                <img [src]="'https://flagsapi.codeaid.io/'+match.homeTeam+'.png'" alt="brazil-flag">
+            </div>
+        </td>
+        <td>
+            <div class="points">
+                <p><b>{{(match.matchPlayed)?match.homeTeamScore:'-'}}</b></p>
+                <p><b>:</b></p>
+                <p><b>{{(match.matchPlayed)?match.awayTeamScore:'-'}}</b></p>
+            </div>
+        </td>
+        <td>
+            <div class="country left">
+                <img [src]="'https://flagsapi.codeaid.io/'+match.awayTeam+'.png'" alt="serbia-flag">
+                <p><b>{{match.awayTeam}}</b></p>
+            </div>
+        </td>
+    </tr>
+    
+    
+</table>

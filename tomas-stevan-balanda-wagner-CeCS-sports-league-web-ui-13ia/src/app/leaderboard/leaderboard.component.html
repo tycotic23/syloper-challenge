@@ -1,0 +1,25 @@
+<h1>League Standings</h1>
+<table>
+    <tr>
+        <th [colSpan]="4" class="left">Team Name</th>
+        <th>MP</th>
+        <th>GF</th>
+        <th>GA</th>
+        <th>Points</th>
+    </tr>
+    <tr *ngFor="let team of leagueService.getLeaderBoard()">
+        <td [colSpan]="4" class="left">
+            <div class="country">
+                
+                <img [src]="'https://flagsapi.codeaid.io/'+team.teamName+'.png'" alt="brazil-flag">
+                <p><b>{{team.teamName}}</b></p>
+            </div>
+        </td>
+        <td>{{team.matchesPlayed}}</td>
+        <td>{{team.goalsFor}}</td>
+        <td>{{team.goalsAgainst}}</td>
+        <td class="points"><b>{{team.points}}</b></td>
+    </tr>
+    
+    
+</table>

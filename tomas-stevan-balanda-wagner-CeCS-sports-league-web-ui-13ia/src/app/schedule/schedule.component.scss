@@ -1,0 +1,42 @@
+
+
+tr:nth-child(odd):not(:first-of-type){
+    background-color: #F6F7F7;
+}
+
+
+
+.country img{
+    width: 53px;
+    height: 37px;
+}
+
+.country,.points{
+    display: flex;
+    gap:10px;
+    align-items: center;
+}
+
+.points{
+    justify-content: center;
+}
+
+.country{
+    justify-content: flex-end;
+}
+.country.left{
+    justify-content: flex-start;
+}
+
+.pad-r{
+    padding-right: 40px;
+}
+
+.left{
+    text-align: left;
+}
+
+.right{
+    text-align: right;
+}
+

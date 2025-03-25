@@ -1,0 +1,31 @@
+.logo-nav{
+    width: 110px;
+}
+
+.icon-nav{
+    height: 25px;
+}
+
+.nav-links{
+    display: flex;
+    gap:40px;
+    justify-content: flex-end;
+    align-items: center;
+}
+.nav-links a{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    color:white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 60px;
+    background-color: #025FEB;
+    align-items: center;
+}
